@@ -17,10 +17,12 @@ To run the analysis notebooks, you will need the following software packages:
 
 The analysis follows a specific order of execution:
 
-1.  **`*_cal.ipynb`**: These notebooks perform the initial calibration of the JWST data.
-2.  **`*_deconvo.ipynb`**: These notebooks apply HPFRDI and deconvolution techniques to the calibrated data.
-3.  **`*_planetmass.ipynb`**: These notebooks are used for estimating planet masses within the TW Hya system.
+1.  **`*_cal.ipynb`**: These notebooks perform the calibration of the JWST raw data.
+2.  **`*_deconvo.ipynb`**: These notebooks apply HPFRDI and deconvolution algorithm to the calibrated data.
+3.  **`*_planetmass.ipynb`**: These notebooks are used for estimating planet mass sensitivities within the TW Hya system.
 4.  **`plot.ipynb` & `plot_hprdi.ipynb`**: These notebooks are for generating plots and visualizations of the results.
+5.  **`Photometry_rust.ipynb` Photometry_rust foldder in **: This notebooks are for performing photometric analysis on the processed data.
+6.  **`Photometry.ipynb` **: This notebooks are for performing photometric analysis on TW Hya system.
 
 ## Notes
 
