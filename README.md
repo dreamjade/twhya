@@ -26,4 +26,3 @@ The analysis follows a specific order of execution:
 
 ## Notes
 *   The TW Hya system is a well-studied T Tauri star with a significant protoplanetary disk, making it an ideal target for studying planet formation.
-*   Recent studies have focused on detecting and characterizing planets within the TW Hya disk, including their masses and formation processes.
