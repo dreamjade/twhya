@@ -1,0 +1,14 @@
+pipeline_version = "0.1.0"
+original_config_file = "/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/source/tw_hya_all_200_deconv_1022.toml"
+image_file_used = "/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/source/F200W.fits"
+output_directory = "/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/all_fits_1022_whole"
+status = "Success"
+notes = "Summary of the fitting run."
+
+[output_files]
+sampler = "/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/all_fits_1022_whole/twhya_sampler.pkl"
+fit_summary_text = "/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/all_fits_1022_whole/fit_summary_results.txt"
+best_fit_summary_toml = "/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/all_fits_1022_whole/best_fit_summary.toml"
+chains_plot = "/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/all_fits_1022_whole/mcmc_chains_twhya.png"
+corner_plot = "/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/all_fits_1022_whole/mcmc_corner_twhya.png"
+radial_profile_plot = "/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/all_fits_1022_whole/radial_profile_twhya.png"

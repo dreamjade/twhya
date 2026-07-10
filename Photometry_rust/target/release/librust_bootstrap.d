@@ -1,1 +1,1 @@
-/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/rust_modules/target/release/librust_bootstrap.so: /npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/rust_modules/src/lib.rs
+/npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/Photometry_rust/target/release/librust_bootstrap.so: /npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/Photometry_rust/src/lib.rs

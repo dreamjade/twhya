@@ -1,0 +1,113 @@
+[[fitting_regions]]
+name = "disk_fit_region"
+r_min_pixels = 47.0 # 22, 47
+r_max_pixels = 97.0 # 47, 97
+annulus_width_pixels = 2.0
+brightness_floor_percentile = 3.0
+
+[observations]
+image_paths = [ "source/F200W.fits",]
+hdu_indices = [ 0,]
+image_indices = [ 0,]  # Specify which image to use from 3D FITS files (0=first, 1=second, etc.). Use null/None for auto-detection
+data_labels = [ "TW Hya Disk",]
+pixel_scale_arcsec = 0.05
+distance_pc = 100.0
+
+# MCMC Configuration
+# For fresh runs, specify the total number of steps to run
+# For continuation, specify the number of ADDITIONAL steps to run
+[mcmc_settings]
+sampler = "emcee"
+nwalkers = 256
+nsteps = 30000
+nburn = 0
+thin_by = 1
+threads = 128
+initial_ball_scale = 0.01
+save_sampler = true
+sampler_output_path = "twhya_sampler.pkl"
+
+[likelihood_settings]
+method = "simple" # Likelihood method: "simple", "chisquare", or "gaussian"
+# Parameters for the 'gaussian' likelihood method.
+
+[likelihood_settings.alpha]
+guess = 0.1284
+prior_type = "uniform"
+prior_args = [ 0.0, 5.0,]
+fit = false
+label = "alpha (variance model)"
+
+[likelihood_settings.beta]
+guess = 0.2365
+prior_type = "uniform"
+prior_args = [ 0.0, 1.0,]
+fit = false
+label = "beta (variance model)"
+
+[[mcmc_settings.moves]]
+name = "DESnookerMove"
+weight = 0.2
+
+[[mcmc_settings.moves]]
+name = "DEMove"
+weight = 0.8
+[mcmc_settings.moves.params]
+sigma = 1e-4
+
+# Continuation Support (optional)
+# To continue from an existing sampler, uncomment the line below and 
+# specify the path to your existing sampler .pkl file:
+# continue_from_sampler = "path/to/existing/sampler.pkl"
+# When continuing, 'nsteps' above represents ADDITIONAL steps to run
+
+[output_settings]
+results_directory = "all_fits_1022_outer" # inner, whole, outer
+plot_chains = true
+plot_corner = true
+plot_radial_profile = true
+
+[profile_calculation]
+binning_mode = "linear"
+linear_bin_size_px = 3.0
+outlier_clip_fraction = 0.05
+use_elliptical_bins = true
+plot_sb_r_squared = false
+statistic = "mean"
+min_pixels_per_bin = 5
+
+[plotting_settings]
+output_format = "png"
+dpi = 100
+chains_plot_filename = "mcmc_chains_twhya.{output_format}"
+corner_plot_filename = "mcmc_corner_twhya.{output_format}"
+profile_plot_filename = "radial_profile_twhya.{output_format}"
+image_bunit_default = "Intensity"
+
+[fitting_parameters.x0]
+guess = 324.5
+prior_type = "uniform"
+prior_args = [ 300, 350,]
+fit = true
+label = "$x_0$ (pix)"
+
+[fitting_parameters.y0]
+guess = 324.5
+prior_type = "uniform"
+prior_args = [ 300, 350,]
+fit = true
+label = "$y_0$ (pix)"
+
+[fitting_parameters.inc_deg]
+guess = 5.0
+prior_type = "uniform"
+prior_args = [ 0.0, 20.0,]
+fit = true
+label = "$i$ (deg)"
+
+[fitting_parameters.pa_deg]
+guess = 245.0
+prior_type = "uniform"
+prior_args = [ 130.0, 250.0,]
+fit = true
+label = "PA (deg)"

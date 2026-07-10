@@ -1,0 +1,14 @@
+# Fit Summary for: TW Hya Disk
+# Config: /npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/source/tw_hya_all_200_deconv_1022.toml
+# Image: /npool/nvme/yuchialin/Toy_Diskgeofitter_beta/example/tw_hya/source/F200W.fits
+
+--- Best-Fit Parameters (median +/- 1-sigma percentile errors) ---
+  $x_0$ (pix)         : 325.2021 (+0.1466 / -0.1248)
+  $y_0$ (pix)         : 324.5634 (+0.1157 / -0.1212)
+  $i$ (deg)           : 8.5218 (+1.7901 / -1.8981)
+  PA (deg)            : 167.2184 (+11.5994 / -10.3539)
+
+--- Convergence Diagnostics ---
+  mean_acceptance_fraction: 0.211
+  autocorrelation_time: [20.4   21.201 33.148 35.358]
+  effective_samples: 279003.153
